@@ -1,10 +1,15 @@
 {
   "rewrites": [
     {
-      "source": "/api/(.*)",
-      "destination": "https://xtend.online/$1"
+      "source": "/api/Voter/(.*)",
+      "destination": "https://xtend.online/Voter/$1"
     }
   ],
+  "functions": {
+    "api/whatsapp-send.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
   "headers": [
     {
       "source": "/static/(.*)",
@@ -17,4 +22,3 @@
     }
   ]
 }
-

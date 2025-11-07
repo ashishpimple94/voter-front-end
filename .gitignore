@@ -22,3 +22,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Local development files
+server.js
+*.md
+!README.md
+

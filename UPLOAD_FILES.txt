@@ -1,0 +1,42 @@
+📤 UPLOAD करने वाली Files:
+
+===========================================
+✅ MAIN FILE (Required):
+===========================================
+📄 send_whatsapp.php
+   Location: api/Voter/send_whatsapp.php
+   Upload to: https://xtend.online/Voter/send_whatsapp.php
+   Purpose: WhatsApp messages भेजने के लिए
+
+===========================================
+🔧 OPTIONAL FILES (Recommended):
+===========================================
+📄 .htaccess
+   Location: api/Voter/.htaccess
+   Upload to: https://xtend.online/Voter/.htaccess
+   Purpose: CORS headers और WordPress prevention
+
+📄 TEST_WHATSAPP.php
+   Location: api/Voter/TEST_WHATSAPP.php
+   Upload to: https://xtend.online/Voter/TEST_WHATSAPP.php
+   Purpose: Testing के लिए (browser में test करने के लिए)
+
+===========================================
+📋 SUMMARY:
+===========================================
+MUST UPLOAD:
+1. ✅ send_whatsapp.php → Server पर upload करें
+
+OPTIONAL (लेकिन recommended):
+2. ✅ .htaccess → Server पर upload करें
+3. ✅ TEST_WHATSAPP.php → Server पर upload करें (testing के लिए)
+
+===========================================
+🎯 QUICK CHECKLIST:
+===========================================
+□ send_whatsapp.php uploaded?
+□ Browser में test किया: https://xtend.online/Voter/send_whatsapp.php
+□ JSON response मिल रहा है? (यह सही है!)
+□ React app में WhatsApp send काम कर रहा है?
+
+

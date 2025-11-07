@@ -5,6 +5,7 @@
 ## Features (विशेषताएं)
 
 - 🔍 **सर्च फंक्शनैलिटी**: नाम, मतदान कार्ड क्र., मोबाइल नंबर या अनु क्र. से खोजें
+- ✏️ **मोबाइल नंबर Edit**: मोबाइल नंबर को inline edit करें और अपडेट करें
 - 📊 **वर्गीकरण**: पुरुषों और महिलाओं की संख्या का वर्गीकरण
 - 📱 **रिस्पॉन्सिव डिज़ाइन**: मोबाइल और डेस्कटॉप दोनों पर काम करता है
 - 🎨 **आधुनिक UI**: सुंदर और आसान इस्तेमाल करने योग्य इंटरफेस
@@ -29,7 +30,21 @@ http://localhost:3000
 ## API
 
 यह एप्लिकेशन निम्नलिखित API का उपयोग करता है:
-- `https://xtend.online/Voter/fetch_voter_data1.php`
+- `https://xtend.online/Voter/fetch_voter_data.php` - Fetch voter data
+- `https://xtend.online/Voter/update_mobile.php` - Update mobile number
+- `https://xtend.online/Voter/send_whatsapp.php` - Send WhatsApp message (NEW)
+
+### API Setup
+
+**Mobile number update API:**
+1. `api/Voter/update_mobile.php` file को server पर upload करें
+2. Database credentials configure करें
+3. Detailed setup guide: `api/Voter/README_API_SETUP.md` देखें
+
+**WhatsApp API:**
+1. `api/Voter/send_whatsapp.php` file को server पर upload करें
+2. WhatsApp Business API credentials configure करें (Meta Cloud API या Twilio)
+3. Detailed setup guide: `api/Voter/README_WHATSAPP_API.md` देखें
 
 ## Technologies Used
 

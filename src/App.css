@@ -373,6 +373,36 @@
   font-weight: 700;
 }
 
+/* Small Sync Loading Indicator */
+.sync-loading-small {
+  padding: 8px 20px;
+  background: #f0f0f0;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #666;
+}
+
+.sync-spinner-small {
+  font-size: 14px;
+  animation: spinSmall 1.5s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spinSmall {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.sync-text-small {
+  font-size: 13px;
+  font-weight: 500;
+  color: #666;
+}
+
 .loading {
   text-align: center;
   padding: 60px 20px;
@@ -507,6 +537,406 @@
   font-family: 'Courier New', monospace;
 }
 
+/* Mobile Number Edit Styles - Desktop */
+.mobile-display-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mobile-value {
+  flex: 1;
+}
+
+.mobile-edit-btn {
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-edit-btn:hover {
+  background: #5568d3;
+  transform: scale(1.1);
+}
+
+.mobile-edit-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 200px;
+}
+
+.mobile-edit-input {
+  flex: 1;
+  padding: 6px 10px;
+  border: 2px solid #667eea;
+  border-radius: 6px;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.mobile-edit-input:focus {
+  border-color: #FF8C00;
+  box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.2);
+}
+
+.mobile-edit-input:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.mobile-edit-buttons {
+  display: flex;
+  gap: 4px;
+}
+
+.mobile-save-btn {
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+}
+
+.mobile-save-btn:hover:not(:disabled) {
+  background: #45a049;
+  transform: scale(1.05);
+}
+
+.mobile-save-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.mobile-cancel-btn {
+  background: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+}
+
+.mobile-cancel-btn:hover:not(:disabled) {
+  background: #da190b;
+  transform: scale(1.05);
+}
+
+.mobile-cancel-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Mobile Number Edit Styles - Mobile Card View */
+.mobile-display-container-mobile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.mobile-edit-container-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  align-items: flex-end;
+}
+
+.mobile-edit-input-mobile {
+  width: 100%;
+  max-width: 200px;
+  padding: 8px 12px;
+  border: 2px solid #667eea;
+  border-radius: 6px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.mobile-edit-input-mobile:focus {
+  border-color: #FF8C00;
+  box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.2);
+}
+
+.mobile-edit-input-mobile:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.mobile-edit-buttons-mobile {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.mobile-save-btn-mobile,
+.mobile-cancel-btn-mobile {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  font-weight: 600;
+}
+
+.mobile-save-btn-mobile {
+  background: #4caf50;
+  color: white;
+}
+
+.mobile-save-btn-mobile:hover:not(:disabled) {
+  background: #45a049;
+  transform: translateY(-1px);
+}
+
+.mobile-save-btn-mobile:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.mobile-cancel-btn-mobile {
+  background: #f44336;
+  color: white;
+}
+
+.mobile-cancel-btn-mobile:hover:not(:disabled) {
+  background: #da190b;
+  transform: translateY(-1px);
+}
+
+.mobile-cancel-btn-mobile:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.mobile-edit-btn-mobile {
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s ease;
+  margin-left: 8px;
+}
+
+.mobile-edit-btn-mobile:hover {
+  background: #5568d3;
+  transform: scale(1.1);
+}
+
+/* Address Edit Styles - Desktop */
+.address-cell {
+  font-family: 'Courier New', monospace;
+}
+
+.address-value {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.address-value:hover {
+  background: #e3f2fd;
+  padding: 2px 4px;
+  border-radius: 4px;
+  color: #1976d2;
+}
+
+.address-edit-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 200px;
+}
+
+.address-edit-input {
+  flex: 1;
+  padding: 6px 10px;
+  border: 2px solid #667eea;
+  border-radius: 6px;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.address-edit-input:focus {
+  border-color: #FF8C00;
+  box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.2);
+}
+
+.address-edit-input:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.address-edit-buttons {
+  display: flex;
+  gap: 4px;
+}
+
+.address-save-btn {
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+}
+
+.address-save-btn:hover:not(:disabled) {
+  background: #45a049;
+  transform: scale(1.05);
+}
+
+.address-save-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.address-cancel-btn {
+  background: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+}
+
+.address-cancel-btn:hover:not(:disabled) {
+  background: #da190b;
+  transform: scale(1.05);
+}
+
+.address-cancel-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Card Edit Styles */
+.card-edit-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.card-edit-input {
+  flex: 1;
+  padding: 6px 10px;
+  border: 2px solid #667eea;
+  border-radius: 6px;
+  font-size: 13px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.card-edit-input:focus {
+  border-color: #FF8C00;
+  box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.2);
+}
+
+.card-edit-input:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.card-edit-buttons {
+  display: flex;
+  gap: 4px;
+}
+
+.card-save-btn {
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+}
+
+.card-save-btn:hover:not(:disabled) {
+  background: #45a049;
+  transform: scale(1.05);
+}
+
+.card-save-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.card-cancel-btn {
+  background: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+}
+
+.card-cancel-btn:hover:not(:disabled) {
+  background: #da190b;
+  transform: scale(1.05);
+}
+
+.card-cancel-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 .clickable {
   cursor: pointer;
   transition: all 0.2s ease;
@@ -555,6 +985,206 @@
 
 .action-btn:active {
   transform: translateY(0);
+}
+
+.action-buttons-group {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.whatsapp-btn {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%) !important;
+  border-color: #128C7E !important;
+}
+
+.whatsapp-btn:hover {
+  background: linear-gradient(135deg, #128C7E 0%, #25D366 100%) !important;
+  border-color: #128C7E !important;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.5) !important;
+}
+
+.card-actions {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 2px solid #f0f0f0;
+}
+
+.whatsapp-btn-mobile {
+  width: 100%;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: white;
+  border: 2px solid #128C7E;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.whatsapp-btn-mobile:hover {
+  background: linear-gradient(135deg, #128C7E 0%, #25D366 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+  border-color: #128C7E;
+}
+
+.whatsapp-btn-mobile:active {
+  transform: translateY(0);
+}
+
+/* WhatsApp Modal */
+.whatsapp-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 20px;
+}
+
+.whatsapp-modal {
+  background: white;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.whatsapp-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+  border-bottom: 2px solid #f0f0f0;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  border-radius: 15px 15px 0 0;
+}
+
+.whatsapp-modal-header h3 {
+  margin: 0;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.whatsapp-modal-close {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.whatsapp-modal-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.whatsapp-modal-body {
+  padding: 25px;
+}
+
+.whatsapp-modal-info {
+  margin: 0 0 15px 0;
+  color: #666;
+  font-size: 14px;
+  text-align: center;
+}
+
+.whatsapp-number-input {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #25D366;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: 'Courier New', monospace;
+  text-align: center;
+  outline: none;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.whatsapp-number-input:focus {
+  border-color: #128C7E;
+  box-shadow: 0 0 0 4px rgba(37, 211, 102, 0.2);
+  transform: scale(1.02);
+}
+
+.whatsapp-modal-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.whatsapp-modal-btn {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-modal-send {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-modal-send:hover:not(:disabled) {
+  background: linear-gradient(135deg, #128C7E 0%, #25D366 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+}
+
+.whatsapp-modal-send:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.whatsapp-modal-cancel {
+  background: #f5f5f5;
+  color: #666;
+  border: 2px solid #e0e0e0;
+}
+
+.whatsapp-modal-cancel:hover {
+  background: #e0e0e0;
+  transform: translateY(-1px);
 }
 
 .pagination-controls {
@@ -873,6 +1503,19 @@
     font-size: 1.8rem;
   }
   
+  .sync-loading-small {
+    padding: 6px 15px;
+    font-size: 12px;
+  }
+  
+  .sync-spinner-small {
+    font-size: 12px;
+  }
+  
+  .sync-text-small {
+    font-size: 12px;
+  }
+  
   .results-section {
     padding: 15px 10px;
   }
@@ -1033,6 +1676,97 @@
   .action-btn {
     padding: 6px 10px;
     font-size: 11px;
+  }
+  
+  .action-buttons-group {
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+  }
+  
+  .action-buttons-group .action-btn {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 11px;
+  }
+  
+  .whatsapp-btn-mobile {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+  
+  .whatsapp-modal-overlay {
+    padding: 10px;
+  }
+  
+  .whatsapp-modal {
+    max-width: 100%;
+  }
+  
+  .whatsapp-modal-header {
+    padding: 15px 20px;
+  }
+  
+  .whatsapp-modal-header h3 {
+    font-size: 16px;
+  }
+  
+  .whatsapp-modal-body {
+    padding: 20px;
+  }
+  
+  .whatsapp-number-input {
+    padding: 12px;
+    font-size: 14px;
+  }
+  
+  .whatsapp-modal-buttons {
+    flex-direction: column;
+  }
+  
+  .whatsapp-modal-btn {
+    width: 100%;
+  }
+  
+  .mobile-edit-container {
+    flex-direction: column;
+    gap: 6px;
+    min-width: auto;
+  }
+  
+  .mobile-edit-input {
+    width: 100%;
+    font-size: 12px;
+  }
+  
+  .mobile-edit-buttons {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  
+  .mobile-save-btn,
+  .mobile-cancel-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  
+  .mobile-edit-container-mobile {
+    width: 100%;
+  }
+  
+  .mobile-edit-input-mobile {
+    max-width: 100%;
+    font-size: 13px;
+  }
+  
+  .mobile-edit-buttons-mobile {
+    width: 100%;
+  }
+  
+  .mobile-save-btn-mobile,
+  .mobile-cancel-btn-mobile {
+    padding: 6px 12px;
+    font-size: 12px;
   }
   
   .pagination-controls {
