@@ -22,8 +22,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Local development files
-server.js
-*.md
-!README.md
+# Local development files (keep server.js for reference, but not needed for deployment)
+# server.js is kept in repo for documentation
 
